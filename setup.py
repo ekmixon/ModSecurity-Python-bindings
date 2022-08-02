@@ -68,11 +68,11 @@ inc_dir, lib_dir = find_modsec()
 
 
 print("*** found modsecurity at:")
-print("    headers: " + str(inc_dir))
-print("    library: " + str(lib_dir))
+print(f"    headers: {str(inc_dir)}")
+print(f"    library: {str(lib_dir)}")
 
 
-if inc_dir == None or lib_dir == None:
+if inc_dir is None or lib_dir is None:
     print("libModSecurity was not found in your system.")
     print("Make sure you have libModSecurity correctly installed in your system.")
     sys.exit(1)
